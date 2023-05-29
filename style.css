@@ -70,9 +70,8 @@ header div h1 {
 
 main {
   background-color: var(--bg-color-main);
-
-  padding-top: 1.4rem;
   display: grid;
+  padding-top: 1.4rem;
   gap: 3.2rem;
 
   text-align: center;
@@ -159,7 +158,7 @@ main p {
 @media (min-width: 730px) {
 
   body {
-    overflow-y: hidden;
+    overflow-y: hidden; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,6 +176,7 @@ main p {
   .header {
     background-color: var(--bg-color-header);
     width: 38rem; 
+    min-width: 30rem;
     height: 100vh;
   }
 
@@ -200,43 +200,42 @@ main p {
 
   main {
     width: 100%;
-    max-width: 900px;
-    display: grid;
+    max-width: 128rem;
 
     background-color: white;
     height: 100vh;
 
-    padding-top: 5rem;
-    padding-left: 10rem;
+    /*padding-top: 5rem;*/
+    padding-left: 8rem;
     padding-right: 8rem;
-
-    grid-template-areas: "A B C"
-    "D E F";
-
-    gap: 0;
-
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     
+  }
+
+  .cards {
+    display: grid;
+    grid-template-areas: 
+    "A B C"
+    "D B F"
+    "D E F";
     gap: 3.2rem;
   }
 
-  main div:nth-child(2) {
+  .cards .card:nth-child(1) {
     grid-area: A;
   }
-  main div:nth-child(3) {
+  .cards .card:nth-child(2) {
     grid-area: B;
   }
-  main div:nth-child(4) {
+  .cards .card:nth-child(3) {
     grid-area: C;
   }
-  main div:nth-child(5) {
+  .cards .card:nth-child(4) {
     grid-area: D;
   }
-  main div:nth-child(6) {
+  .cards .card:nth-child(5) {
     grid-area: E;
   }
-  main div:nth-child(7) {
+  .cards .card:nth-child(6) {
     grid-area: F;
   }
 
@@ -250,8 +249,6 @@ main p {
 
   .card img {
     border-radius: 2.0rem;
-    width: 220px;
-    height: auto;
   }
 
   .card h2 {
